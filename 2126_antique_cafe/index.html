@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antique Bakery Cafe HTML Template by Tooplate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&family=Oswald:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css"> <!-- fontawesome -->
+    <!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="css/tailwind.css">
+    <link rel="stylesheet" href="css/tooplate-antique-cafe.css">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    
+<!--
+
+Tooplate 2126 Antique Cafe
+
+https://www.tooplate.com/view/2126-antique-cafe
+
+-->
+</head>
+<body>    
+    <!-- Intro -->
+    <div id="intro" class="parallax-window" data-parallax="scroll" data-image-src="img/antique-cafe-bg-01.jpg">
+        <nav id="tm-nav" class="fixed w-full">
+            <div class="tm-container mx-auto px-2 md:py-6 text-right relative"> <!-- Added relative for dropdown positioning -->
+                <button class="md:hidden py-2 px-2" id="menu-toggle">
+                    <i class="fas fa-2x fa-bars tm-text-gold"></i>
+                </button>
+                <ul class="mb-3 md:mb-0 text-2xl font-normal flex justify-end flex-col md:flex-row">
+                    <li class="inline-block mb-4 mx-4"><a href="#intro" class="tm-text-gold py-1 md:py-3 px-4">Intro</a></li>
+                    <li class="inline-block mb-4 mx-4"><a href="#menu" class="tm-text-gold py-1 md:py-3 px-4">Menu</a></li>
+                    <li class="inline-block mb-4 mx-4"><a href="#about" class="tm-text-gold py-1 md:py-3 px-4">About</a></li>
+                    <li class="inline-block mb-4 mx-4"><a href="#contact" class="tm-text-gold py-1 md:py-3 px-4">Contact</a></li>
+                    <li class="inline-block mb-4 mx-4 relative"> <!-- Set position relative for dropdown -->
+                        <a href="#" class="tm-text-gold py-1 md:py-3 px-4" id="cart-link">
+                            <i class="fas fa-shopping-cart"></i> Cart (0)
+                        </a>
+                        <div id="cart-dropdown" class="cart-dropdown">
+                            <div id="cart-items">
+                                <!-- Cart items will be dynamically added here -->
+                                <p>Your cart is empty.</p> <!-- Default message -->
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container mx-auto px-2 tm-intro-width">
+            <div class="sm:pb-60 sm:pt-48 py-20">
+                <div class="bg-black bg-opacity-70 p-12 mb-5 text-center">
+                    <h1 class="text-white text-5xl tm-logo-font mb-5">fulkass bistro</h1>
+                    <p class="tm-text-gold tm-text-2xl">Your Daily Flavor Boost</p>
+                </div>    
+                <div class="bg-black bg-opacity-70 p-10 mb-5">
+                    <p class="text-white leading-8 text-sm font-light">
+                        At Fulkass Bistro, we offer a culinary journey filled with exquisite flavors and a cozy ambiance. Our chefs craft each dish with passion, using the freshest ingredients to deliver an unforgettable dining experience. Whether you're here for a special occasion or a casual meal, Fulkass Bistro is where great food and good company come together. </p>
+                </div>
+                <div class="text-center">
+                    <div class="inline-block">
+                        <a href="#menu" class="flex justify-center items-center bg-black bg-opacity-70 py-6 px-8 rounded-lg font-semibold tm-text-2xl tm-text-gold hover:text-gray-200 transition">
+                            <i class="fas fa-coffee mr-3"></i>
+                            <span>Let's explore...</span>                        
+                        </a>
+                    </div>                    
+                </div>                
+            </div>
+        </div>        
+    </div>
+
+  
+   
+  <!-- Menu Section -->
+<h1>Exclusive Dining Menu</h1>
+<div id="menu"   class="menu grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+  <div class="menu-item" onclick="openModal('Gourmet Pizza')">
+    <img src="img/menu-item-1.jpg" alt="Gourmet Pizza" class="w-full h-48 object-cover">
+    <h3 class="text-xl mt-4">Gourmet Pizza</h3>
+    <p class="text-sm">A delicious pizza topped with truffle oil and smoked salmon.</p>
+  </div>
+  <div class="menu-item" onclick="openModal('Artisanal Burger')">
+    <img src="img/Artisanal Burger.jpg" alt="Artisanal Burger" class="w-full h-48 object-cover">
+    <h3 class="text-xl mt-4">Artisanal Burger</h3>
+    <p class="text-sm">Juicy burger with Gruyère cheese and caramelized onions.</p>
+  </div>
+  <div class="menu-item" onclick="openModal('Signature Pasta')">
+    <img src="img/menu-item-6.jpg" alt="Signature Pasta" class="w-full h-48 object-cover">
+    <h3 class="text-xl mt-4">Signature Pasta</h3>
+    <p class="text-sm">Rich pasta in a truffle cream sauce with wild mushrooms.</p>
+  </div>
+  <div class="menu-item" onclick="openModal('cookies')">
+    <img src="img/cookies.jpg" alt="cookies" class="w-full h-48 object-cover">
+    <h3 class="text-xl mt-4">cookies</h3>
+    <p class="text-sm">Rich pasta in a truffle cream sauce with wild mushrooms.</p>
+  </div>
+  <div class="menu-item" onclick="openModal('steak')">
+    <img src="img/steak.jpg" alt="steak" class="w-full h-48 object-cover">
+    <h3 class="text-xl mt-4">steak</h3>
+    <p class="text-sm">Rich pasta in a truffle cream sauce with wild mushrooms.</p>
+  </div>
+  <div class="menu-item" onclick="openModal('cheese cake')">
+    <img src="img/cheese cake.jpg" alt="cheese cake" class="w-full h-48 object-cover">
+    <h3 class="text-xl mt-4">cheese cake</h3>
+    <p class="text-sm">Rich pasta in a truffle cream sauce with wild mushrooms.</p>
+  </div>
+  <!-- Add more items here... -->
+</div>
+
+
+
+
+<!-- Modal -->
+<div id="modal" class="modal hidden fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50">
+    <div class="modal-content bg-white p-6 rounded-lg w-3/4 sm:w-1/2">
+      <h2 id="modal-title" class="text-2xl mb-4"></h2>
+      <img id="modal-image" src="" alt="" class="w-full h-64 object-cover mb-4">
+      <p id="modal-description" class="text-lg mb-6"></p>
+      <button class="bg-green-500 text-white px-4 py-2 rounded" onclick="addToCart()">Add to Cart</button>
+      <button class="bg-gray-500 text-white px-4 py-2 rounded ml-2" onclick="closeModal()">Close</button>
+    </div>
+
+
+    
+  </div>
+
+
+
+  <SCript>const menuItems = {
+    'Gourmet Pizza': {
+        img: 'img/menu-item-1.jpg',
+        description: 'Our Gourmet Pizza is a masterpiece made with truffle oil, smoked salmon, buffalo mozzarella, and porcini mushrooms. A luxurious treat for pizza lovers.',
+    },
+    'cheese cake': {
+        img: 'img/cheese cake.jpg',
+        description: 'Our Gourmet Pizza is a masterpiece made with truffle oil, smoked salmon, buffalo mozzarella, and porcini mushrooms. A luxurious treat for pizza lovers.',
+    },
+    'cookies': {
+        img: 'img/cookies.jpg',
+        description: 'Our Gourmet Pizza is a masterpiece made with truffle oil, smoked salmon, buffalo mozzarella, and porcini mushrooms. A luxurious treat for pizza lovers.',
+    },
+    'Artisanal Burger': {
+        img: 'img/Artisanal Burger.jpg',
+        description: 'The Artisanal Burger features Gruyère cheese, caramelized onions, truffle aioli, and arugula on a brioche bun. Perfectly juicy and full of flavor.',
+    },
+    'steak': {
+        img: 'img/steak.jpg',
+        description: 'Our Signature Pasta combines truffle cream sauce with saffron, wild mushrooms, and prosciutto for a rich, indulgent meal.',
+    },
+    'Signature Pasta': {
+        img: 'img/signature-pasta-large.jpg',
+        description: 'Our Signature Pasta combines truffle cream sauce with saffron, wild mushrooms, and prosciutto for a rich, indulgent meal.',
+    },
+    // Add more items here...
+};
+
+function openModal(item) {
+    document.getElementById('modal-title').innerText = item;
+    document.getElementById('modal-image').src = menuItems[item].img;
+    document.getElementById('modal-description').innerText = menuItems[item].description;
+
+    document.getElementById('modal').classList.remove('hidden');
+    document.getElementById('modal-overlay').classList.remove('hidden');
+}
+
+function closeModal() {
+    document.getElementById('modal').classList.add('hidden');
+    document.getElementById('modal-overlay').classList.add('hidden');
+}
+
+// Add event listener to close modal when clicking on the overlay
+document.getElementById('modal-overlay').addEventListener('click', closeModal);
+
+function addToCart() {
+    alert("Item added to cart!");
+}
+
+  </SCript>
+
+
+
+
+
+
+ 
+    <div id="about" class="parallax-window" data-parallax="scroll" data-image-src="img/antique-cafe-bg-03.jpg">
+        <div class="container mx-auto tm-container py-24 sm:py-48">
+            <div class="tm-item-container sm:ml-auto sm:mr-12 mx-auto sm:px-0 px-4">
+                <div class="bg-white bg-opacity-80 p-12 pb-14 rounded-xl mb-5">
+                    <h2 class="mb-6 tm-text-green text-4xl font-medium">About our restaurant</h2>
+                    <p class="mb-6 text-base leading-8">
+                        At Fulkass bistro, we bring fresh ingredients and bold flavors to the table. Our mission is simple: delicious food, warm vibes, and an unforgettable dining experience. Come enjoy a meal with us!
+                  </p>
+                   
+                </div>
+                <a href="#contact" class="inline-block tm-bg-green transition text-white text-xl pt-3 pb-4 px-8 rounded-md">
+                    <i class="far fa-comments mr-4"></i>
+                    Contact
+                </a>
+            </div>           
+        </div>        
+    </div>
+    <div id="contact" class="parallax-window relative" data-parallax="scroll" data-image-src="img/antique-cafe-bg-04.jpg">
+        <div class="container mx-auto tm-container pt-24 pb-48 sm:py-48">
+            <div class="flex flex-col lg:flex-row justify-around items-center lg:items-stretch">
+                <div class="flex-1 rounded-xl px-10 py-12 m-5 bg-white bg-opacity-80 tm-item-container">
+                    <h2 class="text-3xl mb-6 tm-text-green">Contact Us</h2>
+                    <p class="mb-6 text-lg leading-8">
+                        <p>Got a question or want to make a reservation?</p>
+                         We’d love to hear from you! Reach out to 
+                    </p>
+                    <p class="mb-10 text-lg">
+                        <span class="block mb-2">Tel: <a href="tel:0100200340" class="hover:text-yellow-600 transition">+49 17632693459</a></span>
+                        <span class="block">Email: <a href="mailto:info@company.com" class="hover:text-yellow-600 transition">molkajerbi97@gmail.com</a></span>                        
+                    </p>
+                    <div class="text-center">
+                        
+                    </div>                    
+                </div>
+                <div class="flex-1 rounded-xl p-12 pb-14 m-5 bg-black bg-opacity-50 tm-item-container">
+                    <form action="send_email.php" method="POST" class="text-lg">
+                        <input type="text" name="name" class="input w-full bg-black border-b bg-opacity-0 text-white px-0 py-4 mb-4 tm-border-gold" placeholder="Name" required="yes" />
+                        <input type="email" name="email" class="input w-full bg-black border-b bg-opacity-0 text-white px-0 py-4 mb-4 tm-border-gold" placeholder="Email" required="yes" />
+                        <textarea rows="4" name="message" class="input w-full bg-black border-b bg-opacity-0 text-white px-0 py-4 mb-4 tm-border-gold" placeholder="Message..." required=""></textarea>
+                        <div class="text-right">
+                            <button type="submit" class="text-white hover:text-yellow-500 transition">Send it</button>
+                        </div>                        
+                      </form>
+                </div>
+            </div>
+        </div>        
+    </div>    
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="js/jquery.singlePageNav.min.js"></script>
+    <script>
+
+        function checkAndShowHideMenu() {
+            if(window.innerWidth < 768) {
+                $('#tm-nav ul').addClass('hidden');                
+            } else {
+                $('#tm-nav ul').removeClass('hidden');
+            }
+        }
+
+        $(function(){
+            var tmNav = $('#tm-nav');
+            tmNav.singlePageNav();
+
+            checkAndShowHideMenu();
+            window.addEventListener('resize', checkAndShowHideMenu);
+
+            $('#menu-toggle').click(function(){
+                $('#tm-nav ul').toggleClass('hidden');
+            });
+
+            $('#tm-nav ul li').click(function(){
+                if(window.innerWidth < 768) {
+                    $('#tm-nav ul').addClass('hidden');
+                }                
+            });
+
+            $(document).scroll(function() {
+                var distanceFromTop = $(document).scrollTop();
+
+                if(distanceFromTop > 100) {
+                    tmNav.addClass('scroll');
+                } else {
+                    tmNav.removeClass('scroll');
+                }
+            });
+            
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+        
+    </script>
+
+
+ <!--hedha script lekher  -->
+
+
+
+   <script>
+// Cart array to hold added items
+let cart = [];
+
+// Function to open modal and display the selected item's details
+function openModal(itemName) {
+    let item = document.querySelector(`[onclick="openModal('${itemName}')"]`);
+    let itemTitle = item.querySelector("h3").innerText;
+    let itemImage = item.querySelector("img").src;
+    let itemDescription = item.querySelector("p").innerText;
+
+    document.getElementById("modal-title").innerText = itemTitle;
+    document.getElementById("modal-image").src = itemImage;
+    document.getElementById("modal-description").innerText = itemDescription;
+
+    // Display the modal
+    document.getElementById("modal").classList.remove("hidden");
+    document.getElementById("modal-overlay").classList.remove("hidden");
+}
+
+// Function to add items to the cart
+function addToCart() {
+    let itemName = document.getElementById("modal-title").innerText;
+    let itemImage = document.getElementById("modal-image").src;
+    let itemDescription = document.getElementById("modal-description").innerText;
+
+    // Add item to the cart array
+    cart.push({
+        name: itemName,
+        image: itemImage,
+        description: itemDescription
+    });
+
+    // Update the cart icon
+    updateCartIcon();
+
+    // Close the modal after adding the item to the cart
+    closeModal();
+}
+
+// Function to close the modal
+function closeModal() {
+    document.getElementById("modal").classList.add("hidden");
+    document.getElementById("modal-overlay").classList.add("hidden");
+}
+
+// Function to update the cart icon or show the number of items in the cart
+function updateCartIcon() {
+    let cartIcon = document.getElementById('cart-link');
+    cartIcon.innerHTML = `<i class="fas fa-shopping-cart"></i> Cart (${cart.length})`;
+}
+
+// Function to show the cart items in the dropdown
+function showCart() {
+    let cartDropdown = document.getElementById("cart-dropdown");
+    let cartItemsContainer = document.getElementById("cart-items");
+    cartItemsContainer.innerHTML = '';  // Clear previous items
+
+    if (cart.length === 0) {
+        cartItemsContainer.innerHTML = '<p>Your cart is empty.</p>';
+    } else {
+        cart.forEach((item, index) => {
+            cartItemsContainer.innerHTML += `
+    <div class="cart-item">
+        <img src="${item.image}" alt="${item.name}">
+        <div>
+            <h3 class="text-lg">${item.name}</h3>
+            <p class="text-sm">${item.description}</p>
+        </div>
+        <button class="remove-button" onclick="removeFromCart(${index})">X</button>
+    </div>
+    <hr class="my-4">
+`;
+
+        });
+    }
+
+    // Toggle dropdown visibility
+    cartDropdown.classList.toggle('show');
+}
+
+// Function to remove an item from the cart
+function removeFromCart(index) {
+    // Remove the item from the cart array
+    cart.splice(index, 1);
+
+    // Update the cart icon
+    updateCartIcon();
+
+    // Refresh the dropdown display
+    showCart();
+}
+
+// Attach event listener to Cart link to show/hide cart items
+document.getElementById('cart-link').addEventListener("click", (event) => {
+    event.preventDefault(); // Prevent default anchor link behavior
+    showCart(); // Show or hide cart items
+});
+// Function to open modal and display the selected item's details
+function openModal(itemName) {
+    // Hide the menu items by setting visibility to hidden
+    const menuItems = document.querySelectorAll('.menu-item');
+    menuItems.forEach(item => {
+        item.style.visibility = 'hidden';
+    });
+
+    // Get the clicked menu item element
+    let item = document.querySelector(`[onclick="openModal('${itemName}')"]`);
+    let itemTitle = item.querySelector("h3").innerText;
+    let itemImage = item.querySelector("img").src;
+    let itemDescription = item.querySelector("p").innerText;
+
+    document.getElementById("modal-title").innerText = itemTitle;
+    document.getElementById("modal-image").src = itemImage;
+    document.getElementById("modal-description").innerText = itemDescription;
+
+    // Display the modal
+    document.getElementById("modal").classList.remove("hidden");
+    document.getElementById("modal-overlay").classList.remove("hidden");
+}
+
+// Function to close the modal and show the menu items again
+function closeModal() {
+    // Show the menu items by setting visibility to visible
+    const menuItems = document.querySelectorAll('.menu-item');
+    menuItems.forEach(item => {
+        item.style.visibility = 'visible';
+    });
+
+    document.getElementById("modal").classList.add("hidden");
+    document.getElementById("modal-overlay").classList.add("hidden");
+}
+
+
+    </script>
+        
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+</body>
+</html>
